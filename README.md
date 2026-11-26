@@ -2,7 +2,7 @@
 
 Backend engineer (~7 years) building **payments, ledgers and event-driven systems** that move real money and have to be correct under retries, partial failures and concurrency.
 
-**Stack:** Kotlin · Java · Spring Boot · Kafka · PostgreSQL · MongoDB · DynamoDB · Redis · AWS (ECS, Lambda, SQS/SNS, AppConfig) · Docker · Terraform
+**Stack:** Kotlin · Java · Spring Boot · Kafka · PostgreSQL · MongoDB · DynamoDB · Redis · AWS · Docker · Terraform
 
 ---
 
