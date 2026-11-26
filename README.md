@@ -1,16 +1,26 @@
-## Hi there 👋
+### Hi, I'm Virendra 👋
 
-<!--
-**viren97/viren97** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Backend engineer (~7 years) building **payments, ledgers and event-driven systems** that move real money and have to be correct under retries, partial failures and concurrency.
 
-Here are some ideas to get you started:
+**Stack:** Kotlin · Java · Spring Boot · Kafka · PostgreSQL · MongoDB · DynamoDB · Redis · AWS (ECS, Lambda, SQS/SNS, AppConfig) · Docker · Terraform
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+#### What I've built
+
+- **Syfe (fintech)**: designed and built the payments microservice from scratch (HLD + LLD), now the platform other services use for payment use cases and handling 100k+ transactions/month. e-GIRO / HSBC in-app funding over mTLS, wallet ledger and reconciliation.
+- **Tata 1mg**: replaced a shared, unreliable notification platform with an in-house event-driven one serving 10+ services; led a monolith-to-microservices migration.
+- **Amazon**: built a domain microservice that took ownership of a database shared by several monoliths, removing a scaling bottleneck; built data-replication and load/shadow-testing tools.
+
+#### Featured projects
+
+| Project | What it shows |
+|---|---|
+| [**wallet-ledger-service**](https://github.com/viren97/wallet-ledger-service) | Kotlin / Spring Boot wallet service: double-entry ledger, state-machine lifecycle, transactional outbox, idempotency keys, reconciliation, concurrency-tested. Docker Compose (Postgres, Kafka, Redis) and Helm. |
+| [**terraform-ecs-fargate-bluegreen**](https://github.com/viren97/terraform-ecs-fargate-bluegreen) | Terraform modules for ECS Fargate behind an ALB with a CodePipeline → CodeBuild → CodeDeploy blue/green pipeline. |
+
+#### Currently
+
+Open to **remote senior backend roles**, especially in fintech and payments.
+
+[LinkedIn](https://www.linkedin.com/in/virennpandey) · virennpandey@gmail.com
