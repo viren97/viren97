@@ -1,26 +1,31 @@
-### Hi, I'm Virendra 👋
+## Virendra Pandey
+**Senior Backend Engineer · Payments, ledgers & event-driven systems**
 
-Backend engineer (~7 years) building **payments, ledgers and event-driven systems** that move real money and have to be correct under retries, partial failures and concurrency.
-
-**Stack:** Kotlin · Java · Spring Boot · Kafka · PostgreSQL · MongoDB · DynamoDB · Redis · AWS · Docker · Terraform
+I build systems that move real money and stay correct under retries, partial failures and concurrency.
+Ex-Amazon, Syfe, Tata 1mg · Kotlin/Java · Spring Boot · Kafka · Postgres · AWS
 
 ---
 
-#### What I've built
+### Impact
+- **Syfe (fintech):** designed and built the payments platform from scratch (HLD → LLD → prod). Other teams' services use it for every payment flow, and it handles **100k+ transactions/month**: e-GIRO/HSBC in-app funding over mTLS, wallet ledger, automated reconciliation. Led delivery across backend, frontend and QA.
+- **Tata 1mg:** replaced an unreliable shared notification platform with an in-house event-driven one serving **10+ services**; led the monolith → microservices migration.
+- **Amazon:** split a database shared by several monoliths into its own domain service, removing a scaling bottleneck; built shadow/load-testing and data-replication tooling (saved ~1 week per test-env setup).
+- **Team:** hired and mentored interns and SDE1s (2 of 3 interns converted full-time); run design reviews; interview for system design, LLD and DSA.
 
-- **Syfe (fintech)**: designed and built the payments microservice from scratch (HLD + LLD), now the platform other services use for payment use cases and handling 100k+ transactions/month. e-GIRO / HSBC in-app funding over mTLS, wallet ledger and reconciliation.
-- **Tata 1mg**: replaced a shared, unreliable notification platform with an in-house event-driven one serving 10+ services; led a monolith-to-microservices migration.
-- **Amazon**: built a domain microservice that took ownership of a database shared by several monoliths, removing a scaling bottleneck; built data-replication and load/shadow-testing tools.
+### Featured work
+| Repo | Problem it solves | Key decisions |
+|---|---|---|
+| [wallet-ledger-service](https://github.com/viren97/wallet-ledger-service) | Moving money without double-spends or lost updates | Double-entry ledger, state machine, idempotency keys, transactional outbox, reconciliation, concurrency tests |
+| [external-api-client](https://github.com/viren97/external-api-client) | Calling flaky bank/partner APIs safely | Spring Boot starter: retries + circuit breaker, Redis rate limiting, mTLS, outbox, signed webhooks |
+| [goal-coach-service](https://github.com/viren97/goal-coach-service) | Putting an LLM in a real product loop | AI-planned tasks, adaptive push nudges via Kafka + FCM, Claude integration |
+| [terraform-ecs-fargate-bluegreen](https://github.com/viren97/terraform-ecs-fargate-bluegreen) | Zero-downtime deploys | Terraform ECS Fargate + ALB, CodePipeline → CodeDeploy blue/green |
 
-#### Featured projects
+### How I build
+- Correctness first: idempotency, ledgers as source of truth, reconciliation as a feature
+- Async by default, but with an outbox, not dual writes
+- Observable from day one: logs, metrics and alerts ship with the service
+- Design docs and trade-offs before code
 
-| Project | What it shows |
-|---|---|
-| [**wallet-ledger-service**](https://github.com/viren97/wallet-ledger-service) | Kotlin / Spring Boot wallet service: double-entry ledger, state-machine lifecycle, transactional outbox, idempotency keys, reconciliation, concurrency-tested. Docker Compose (Postgres, Kafka, Redis) and Helm. |
-| [**terraform-ecs-fargate-bluegreen**](https://github.com/viren97/terraform-ecs-fargate-bluegreen) | Terraform modules for ECS Fargate behind an ALB with a CodePipeline → CodeBuild → CodeDeploy blue/green pipeline. |
-
-#### Currently
-
-Open to **remote senior backend roles**, especially in fintech and payments.
-
+### Let's talk
+Open to **remote senior backend roles**, building reliable, high-scale systems that teams can depend on.
 [LinkedIn](https://www.linkedin.com/in/virennpandey) · virennpandey@gmail.com
